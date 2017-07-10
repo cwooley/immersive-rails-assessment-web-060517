@@ -1,0 +1,7 @@
+<%= form_for @appearance do |f| %>
+
+  <p><%= f.select :guest_id, @guests.collect { |guest| [ guest.name, guest.id ] }%></p>
+  <p><%= f.select :episode_id, @episodes.collect { |episode| ["##{episode.number} #{episode.date}", episode.id]} %></p>
+  <p><%= f.select :rating, @ratings_array %></p>
+  <p><%= f.submit %></p>
+<% end %>
