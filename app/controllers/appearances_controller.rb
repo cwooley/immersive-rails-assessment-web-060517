@@ -3,7 +3,7 @@ class AppearancesController < ApplicationController
     @appearance = Appearance.new
     @guests = Guest.all
     @episodes = Episode.all
-    @ratings_array = (1..10).to_a.map { |i| [i,i] }
+    @ratings_array = (1..5).to_a.map { |i| [i,i] }
   end
 
   def create
